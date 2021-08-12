@@ -1,5 +1,5 @@
-import Header from "./home/header";
-import LeftMenu from "./home/leftmenu";
+import Header from "./header";
+import LeftMenu from "./leftmenu";
 
 const Layout = (props) => {
   return (
@@ -7,7 +7,7 @@ const Layout = (props) => {
       <Header />
       <div className="content">
         <LeftMenu />
-        {props.children}
+        <div className="in-container">{props.children}</div>
       </div>
     </>
   );

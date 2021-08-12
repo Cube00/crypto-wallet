@@ -1,7 +1,7 @@
 import { RiSearchLine, RiExchangeFundsFill } from "react-icons/ri";
 import { IoMdNotificationsOutline, IoIosArrowDown } from "react-icons/io";
 import { BiCommentDetail } from "react-icons/bi";
-import Avatar from "../../../assets/images/avatar.jpg";
+import Avatar from "../../assets/images/avatar.jpg";
 
 const Header = () => {
   const date = new Date();

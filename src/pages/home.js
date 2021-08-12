@@ -1,9 +1,9 @@
-import Layout from "../components/pageUI/layout";
+import Dashboard from "../components/home/dashboard";
 
 const Home = () => {
   return (
     <>
-      <Layout>this is props</Layout>
+      <Dashboard />
     </>
   );
 };
