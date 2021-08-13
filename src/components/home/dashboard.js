@@ -13,7 +13,6 @@ const Dashboard = ({ getDash, dashstore }) => {
   }, [getDash]);
 
   if (dashstore !== undefined) {
-    var { litecoin, bitcoin, ethereum, binancecoin } = dashstore;
     var dashboard = [];
     let index = 0;
     let def = ",";
@@ -22,19 +21,32 @@ const Dashboard = ({ getDash, dashstore }) => {
       return e;
     });
 
-    for (var i of Object.keys(dashstore)) {
-      if (i === "bitcoin") {
-        dashboard.push(i + def + value[index].usd + def + "BTC" + def + Btc);
+    for (var key of Object.keys(dashstore)) {
+      switch (key) {
+        case "bitcoin":
+          dashboard.push(
+            key + def + value[index].usd + def + "BTC" + def + Btc
+          );
+          break;
+        case "binancecoin":
+          dashboard.push(
+            key + def + value[index].usd + def + "BNB" + def + Bnb
+          );
+          break;
+        case "ethereum":
+          dashboard.push(
+            key + def + value[index].usd + def + "ETH" + def + Eth
+          );
+          break;
+        case "litecoin":
+          dashboard.push(
+            key + def + value[index].usd + def + "LTC" + def + Ltc
+          );
+          break;
+        default:
+          return "Crypto valute not found";
       }
-      if (i === "binancecoin") {
-        dashboard.push(i + def + value[index].usd + def + "BNB" + def + Bnb);
-      }
-      if (i === "ethereum") {
-        dashboard.push(i + def + value[index].usd + def + "ETH" + def + Eth);
-      }
-      if (i === "litecoin") {
-        dashboard.push(i + def + value[index].usd + def + "LTC" + def + Ltc);
-      }
+
       index++;
     }
     var mapDashboard = dashboard.map((e) => e.split(","));
@@ -43,11 +55,11 @@ const Dashboard = ({ getDash, dashstore }) => {
   return (
     <>
       <div className="dashboard">
-        <h2>Dashboard</h2>
+        <h2 className="dash-head">Dashboard</h2>
         {dashstore !== undefined && (
           <div className="crypto-dashboard">
-            {mapDashboard.map((state) => {
-              return <DashboardItem state={state} />;
+            {mapDashboard.map((state, index) => {
+              return <DashboardItem state={state} key={index} />;
             })}
           </div>
         )}

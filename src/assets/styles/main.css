@@ -309,6 +309,7 @@ header {
 }
 
 .in-container {
+  width: 100%;
   margin: 0 60px;
 }
 
@@ -317,4 +318,55 @@ header {
   font-size: 18px;
   font-weight: 600;
   color: #fff;
+}
+
+.crypto-dashboard {
+  display: flex;
+  justify-content: space-between;
+}
+
+.crypto-valute {
+  width: 30%;
+  padding: 20px;
+  margin: 20px 20px 20px 0;
+  background-color: #020202;
+  border: 1px solid#2b2b2b;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 10px 11px -7px black;
+  -moz-box-shadow: 0 10px 11px -7px black;
+  box-shadow: 0 10px 11px -7px black;
+}
+
+.crpto-names {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.crpto-names img {
+  width: 55px;
+  height: 55px;
+  float: left;
+  margin-right: 20px;
+}
+
+.crpto-names h2 {
+  color: #c5c5c5;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.crpto-names span {
+  color: #828283;
+  font-size: 13px;
+  text-transform: capitalize;
+}
+
+.price-dash {
+  display: block;
+  font-size: 27px;
+}
+
+.dash-head {
+  font-size: 20px;
 }

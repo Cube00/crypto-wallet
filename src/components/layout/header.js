@@ -4,10 +4,10 @@ import { BiCommentDetail } from "react-icons/bi";
 import Avatar from "../../assets/images/avatar.jpg";
 
 const Header = () => {
-  const date = new Date();
-  const month = date.toLocaleString("default", { month: "short" });
-  const year = date.getFullYear();
-  const day = date.getDay();
+  const date = new Date(),
+    month = date.toLocaleString("default", { month: "short" }),
+    year = date.getFullYear(),
+    day = date.getDay();
 
   return (
     <>

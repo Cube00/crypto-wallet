@@ -8,10 +8,11 @@ const DashboardItem = ({ state }) => {
     <>
       <div className="crypto-valute">
         <div className="crpto-names">
+          <img src={img} alt="" />
           <span>{name}</span>
           <h2>{shortName}</h2>
         </div>
-        <span>${price}</span>
+        <span className="price-dash">${price}</span>
       </div>
     </>
   );
